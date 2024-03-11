@@ -1,0 +1,128 @@
+def path10 ():
+  print ("You decide you don't want to risk getting hurt, so you go to the garage. On your way back from taking out the trash you were carrying which was conveniently right next to the garbage can, you encounter a gnome. He tells you that you have to escape from your stepdad, and the only way to do so is to follow his advice.\n ")
+  print ("What do you do?\n")
+  print ("1. Listen to what the gnome says.\n")
+  print ("2. Tell the gnome that you don't trust it, and you don't want to escape.")
+  print ("3. Pick up and smash the gnome on the ground out of fear.")
+  userinput = ""
+  userinput = input()
+  if userinput == "1":
+    path11()
+  elif userinput == "2":
+    path12()
+  elif userinput == "3":
+    path13()
+
+def path11():
+ print ("The gnome tells you that you have to go into the kitchen and grab one of your dad's angry juices. Apparently, it is one of the sacred objects needed to escape.\n")
+ print ("What do you do?\n")
+ print ("1. Tell him you already have the angry juice.")
+ print ("2. Go back inside and try to find it.")
+ if userinput == "1" and angryjuice == "0":
+  print ("You liar! angry juice isn't in your current inventory.\n")
+  path11()
+ elif userinput == "1" and angryjuice == "1":
+  print ("The gnome takes the angry juice and uses his magical gnome powers to turn it into a key. He then teleports you back inside the house, right next to the front door.")
+  key == "1"
+  keyending()
+ elif userinput == "2":
+  print ("You go back inside the house and find your dad. You tell him that you took out the trash.\n")
+  path20()
+   
+
+
+def path12():
+ print ("The gnome responds with these words. Oh well, you know what they say. If a human agrees with something you said, what you said is stupid. You decide to agree with his statement, creating a paradox and eradicating the known universe.")
+ gameover()
+def path13():
+ print ("You smash the gnome on the ground and porcelain bits fly everywhere. You find a key amongst the rubble. However, your dad heard you and is running towards your location.\n")
+ key == "1"
+ path30()
+ 
+
+ 
+ 
+def path20():
+ print ("He looks you in the eye and thinks you are lying, but he gives you the benefit of the doubt. He invites you to sit at the couch to watch football with him.\n")
+ print ("What do you do?\n")
+ print ("1. Ask him to give you an angry juice.\n")
+ print ("2. Just sit down and relax.\n")
+ userinput = ""
+ userinput = input()
+ if userinput == "1":
+   path21()
+ elif userinput == "2":
+  path22()
+def path21 ():
+ print ("He seems to be confused. Apparently, he doesn't know what an angry juice is. He then says that you think you are messing with him.\n")
+ path30()
+def path22():
+ print ("You sit down and relax while watching football with your dad. He actually seems nice now. Suddenly, you wake up. It was all a dream.\n")
+ gameover()
+def path30 ():
+  print ("Your dad gets visibly angry, and smashes a bottle of his angry juice on the table. He then grabs the belt conveniently next to him and starts chasing you with it. You hide in the kitchen, but he's getting closer. One wrong move and he'll notice you.\n")
+  print ("What do you do?\n")
+  print ("1. Climb into the fridge and hide.")
+  print ("2. Stay in the same place and hope he doesn't find you.")
+  print ("3. Grab the nearest object to you and fight back.")
+  userinput = ""
+  userinput = input()
+  if userinput == "1":
+    path31()
+
+def path31 ():
+ print ("You hide in the fridge and your dad doesn't see you. You find a bottle of his angry juice as well, and decide to keep it on you just in case. Suddenly, a portal opens that leads to the garage, and you notice your dad is approaching from a clear part of the fridge.\n") 
+ angryjuice == "1"
+ path10()
+def intro ():
+  print ("You are Chris. Chris P. Bacon. Your mom left you with your stepdad tonight, and he's starting to get a little bit angry. Must be all that angry juice he's drinking while watching his football game. He walks up to you and screams at you to go take out the trash.\n")
+  print ("What do you do?\n")
+  print ("1. Follow his orders and go take out the trash.\n")
+  print ("2. Tell him that you already took out the trash.\n")
+  print ("3. Don't take out the trash, disobeying his orders.\n")
+  userinput = ""
+  userinput = input()
+  if userinput == "1":
+   path10()
+  if userinput == "2":
+   path20()
+  if userinput == "3":
+   path30()
+
+def gameover ():
+  print ("Game over! Press 1 to try again.\n")
+  angryjuice = "0"
+  key = "0"
+  userinput = input()
+  if userinput == "1":
+    intro()
+def keyending ():
+ print ("You face the front door and get ready to exit. Your dad is just behind you, livid with anger, but you can do this.\n")
+ if key == "0":
+  print ("Unfortunately, you have no key, so your dad catches you.")
+  gameover()
+ elif key == "1":
+  print ("You unlock the door and run outside, then quickly close it and lock your dad inside. You look around at the outside world, realizing you are homeless now. However, you could go anywhere from this point. The world is your oyster.\n")
+ gameover()
+print ("Chris P. Bacon: Operation Escape From Stepdad\n")
+print ("Press 1 to Start!")
+
+userinput = ""
+userinput = input()
+if userinput == "1":
+  intro()
+  
+elif userinput == "2":
+  print ("I said, press 1!")
+
+angryjuice = "0"
+key = "0"
+  
+
+
+
+
+
+
+
+ 
